@@ -12,10 +12,22 @@ namespace ControlPagos
 {
     public partial class Form1 : Form
     {
+        List<Cliente> clientes = new List<Cliente>(); 
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void txt_nombre_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

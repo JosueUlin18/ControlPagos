@@ -36,13 +36,13 @@ namespace ControlPagos
             this.label4 = new System.Windows.Forms.Label();
             this.txt_dpi = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_apellido = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_cuota = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_dpiDue = new System.Windows.Forms.TextBox();
+            this.txt_numCasa = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_propetarioDatos = new System.Windows.Forms.Button();
@@ -113,12 +113,12 @@ namespace ControlPagos
             this.txt_nombre.TabIndex = 7;
             this.txt_nombre.TextChanged += new System.EventHandler(this.txt_nombre_TextChanged);
             // 
-            // textBox1
+            // txt_apellido
             // 
-            this.textBox1.Location = new System.Drawing.Point(905, 240);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(334, 27);
-            this.textBox1.TabIndex = 9;
+            this.txt_apellido.Location = new System.Drawing.Point(905, 240);
+            this.txt_apellido.Name = "txt_apellido";
+            this.txt_apellido.Size = new System.Drawing.Size(334, 27);
+            this.txt_apellido.TabIndex = 9;
             // 
             // label5
             // 
@@ -140,12 +140,13 @@ namespace ControlPagos
             this.label6.TabIndex = 11;
             this.label6.Text = "Propiedades";
             // 
-            // textBox2
+            // txt_cuota
             // 
-            this.textBox2.Location = new System.Drawing.Point(905, 474);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(334, 27);
-            this.textBox2.TabIndex = 17;
+            this.txt_cuota.Location = new System.Drawing.Point(905, 474);
+            this.txt_cuota.Name = "txt_cuota";
+            this.txt_cuota.Size = new System.Drawing.Size(334, 27);
+            this.txt_cuota.TabIndex = 17;
+            this.txt_cuota.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label7
             // 
@@ -156,19 +157,19 @@ namespace ControlPagos
             this.label7.TabIndex = 16;
             this.label7.Text = "Cuota de mantenimiento";
             // 
-            // textBox3
+            // txt_dpiDue
             // 
-            this.textBox3.Location = new System.Drawing.Point(905, 423);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(334, 27);
-            this.textBox3.TabIndex = 15;
+            this.txt_dpiDue.Location = new System.Drawing.Point(905, 423);
+            this.txt_dpiDue.Name = "txt_dpiDue";
+            this.txt_dpiDue.Size = new System.Drawing.Size(334, 27);
+            this.txt_dpiDue.TabIndex = 15;
             // 
-            // textBox4
+            // txt_numCasa
             // 
-            this.textBox4.Location = new System.Drawing.Point(905, 381);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(334, 27);
-            this.textBox4.TabIndex = 14;
+            this.txt_numCasa.Location = new System.Drawing.Point(905, 381);
+            this.txt_numCasa.Name = "txt_numCasa";
+            this.txt_numCasa.Size = new System.Drawing.Size(334, 27);
+            this.txt_numCasa.TabIndex = 14;
             // 
             // label8
             // 
@@ -191,21 +192,23 @@ namespace ControlPagos
             // 
             // btn_propetarioDatos
             // 
-            this.btn_propetarioDatos.Location = new System.Drawing.Point(849, 295);
+            this.btn_propetarioDatos.Location = new System.Drawing.Point(982, 292);
             this.btn_propetarioDatos.Name = "btn_propetarioDatos";
             this.btn_propetarioDatos.Size = new System.Drawing.Size(238, 32);
             this.btn_propetarioDatos.TabIndex = 18;
             this.btn_propetarioDatos.Text = "Ingresar datos del propetario";
             this.btn_propetarioDatos.UseVisualStyleBackColor = true;
+            this.btn_propetarioDatos.Click += new System.EventHandler(this.btn_propetarioDatos_Click);
             // 
             // btn_ingresarPropiedad
             // 
-            this.btn_ingresarPropiedad.Location = new System.Drawing.Point(849, 532);
+            this.btn_ingresarPropiedad.Location = new System.Drawing.Point(982, 532);
             this.btn_ingresarPropiedad.Name = "btn_ingresarPropiedad";
             this.btn_ingresarPropiedad.Size = new System.Drawing.Size(229, 29);
             this.btn_ingresarPropiedad.TabIndex = 19;
             this.btn_ingresarPropiedad.Text = "Ingresar propiedad";
             this.btn_ingresarPropiedad.UseVisualStyleBackColor = true;
+            this.btn_ingresarPropiedad.Click += new System.EventHandler(this.btn_ingresarPropiedad_Click);
             // 
             // Form1
             // 
@@ -214,14 +217,14 @@ namespace ControlPagos
             this.ClientSize = new System.Drawing.Size(1318, 765);
             this.Controls.Add(this.btn_ingresarPropiedad);
             this.Controls.Add(this.btn_propetarioDatos);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_cuota);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_dpiDue);
+            this.Controls.Add(this.txt_numCasa);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_apellido);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.txt_dpi);
@@ -248,13 +251,13 @@ namespace ControlPagos
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_dpi;
         private System.Windows.Forms.TextBox txt_nombre;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_apellido;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_cuota;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_dpiDue;
+        private System.Windows.Forms.TextBox txt_numCasa;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_propetarioDatos;
